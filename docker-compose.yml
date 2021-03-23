@@ -1,0 +1,31 @@
+version: "3.8"
+networks: 
+  nextcloud:
+    driver: bridge
+    ipam:
+      driver: default
+volumes: 
+  db_nextcloud: {}
+  files_nextcloud: {}
+services:
+  server:
+    build: .
+    restart: always
+    networks:
+      - nextcloud
+    ports: 
+      - 8080:80
+    volumes: 
+      - files_nextcloud:/nextcloud
+  database:
+    image: mariadb
+    restart: always
+    networks:
+      - nextcloud
+    volumes: 
+      - db_nextcloud:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: nextcloud
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: nextcloud
+      MYSQL_PASSWORD: nextcloud
