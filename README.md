@@ -2,7 +2,7 @@
 
 MBDS 2020 - 2021
 
-Base sur le projet nextcloud : https://nextcloud.com/
+Basé sur le projet nextcloud : https://nextcloud.com/
 Utilise une base de donnée MariaDB, un servuer apache avec PHP.
 
 ## Auteurs
