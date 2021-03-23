@@ -16,7 +16,7 @@ Utilise une base de donnée MariaDB, un servuer apache avec PHP.
 Cloner le projet : 
 
 ```sh
-git clone https://github.com/Ainorte/nextcloud-docker
+git clone --recurse-submodules -j8 https://github.com/Ainorte/nextcloud-docker
 ```
 
 Rentrer dans le projet :
